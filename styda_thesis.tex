@@ -1,0 +1,157 @@
+\documentclass[a4paper,12pt,oneside]{book} % nie: report!
+
+
+% pakiety
+\usepackage{polski} % lepiej to zamiast babel!
+\usepackage[utf8]{inputenc} % w razie kłopotów spróbować: \usepackage[utf8x]{inputenc}
+\usepackage{fancyhdr} % nagłówki i stopki
+\usepackage{indentfirst} % WAŻNE, MA BYĆ!
+\usepackage[pdftex]{graphicx} % to do wstawiania rysunków
+\usepackage{amsmath} % to do dodatkowych symboli, przydatne
+\usepackage[pdftex,
+            left=1in,right=1in,
+            top=1in,bottom=1in]{geometry} % marginsy
+\usepackage{amssymb} % to też do dodatkowych symboli, też przydatne
+\usepackage{pdfpages}
+\usepackage{lipsum}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{booktabs}
+\graphicspath{ {./images/} }
+\DeclareCaptionType{code}[Listing][Spis listingów] 
+
+% definicje nagłówków i stopek
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{}
+\fancyhead[LE,RO]{\footnotesize\bfseries\thepage}
+\fancyhead[LO]{\footnotesize\rightmark}
+\fancyhead[RE]{\footnotesize\leftmark}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{1.5pt}
+\fancypagestyle{plain}{\fancyhead{}\cfoot{\footnotesize\bfseries\thepage}\renewcommand{\headrulewidth}{0pt}}
+
+
+% interlinia
+\linespread{1.25}
+
+
+% treść
+\begin{document}
+\sloppy
+\thispagestyle{empty}
+\includepdf{stronatytulowa}
+\newpage{}
+
+\thispagestyle{empty}
+\newpage{}
+
+\tableofcontents{}
+
+\chapter*{Wstęp}
+\addcontentsline{toc}{chapter}{Wstęp}
+\label{Wstep}
+%Mega ogólne sprawy dotyczące tego co chce zrobić
+\lipsum[1]
+
+\chapter*{Cel i zakres pracy}
+\addcontentsline{toc}{chapter}{Cel i zakres pracy}
+\label{Cel i zakres pracy}
+%celem pracy jest napisanie programu bla bla
+\lipsum[1]
+
+\chapter{Systemy rekomendacji}
+\lipsum[1]\cite{test1}
+
+\section{Historia}
+\lipsum[1]\cite{test2}
+
+\lipsum[1]\cite{test2}
+
+\lipsum[1]\cite{test2}
+
+
+\section{Architektura}
+\lipsum[1]\cite{test4}
+
+\section{Wady i zalety}
+\lipsum[1]\cite{test5}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.8]{obelix.png}
+\caption{Obelix [Google Images]}
+\end{figure}
+
+\lipsum[1]\cite{test5}
+
+
+\chapter{Algorytmy rankingowe}
+
+\section{Section1}
+
+\lipsum[1]
+
+\subsection{Subs1}
+\lipsum[1]
+
+\subsection{Subs2}
+\lipsum[1]
+
+\section{Section2}
+\lipsum[1]
+
+\section{Section3}
+\lipsum[1]
+
+\subsection{Subs1}
+\lipsum[1]
+
+\subsection{Subs2}
+\lipsum[1]
+
+\chapter{Ontologie i grafowe bazy danych}
+\lipsum[1]
+
+\chapter{Opracowanie architektury i wybór narzędzi}
+\lipsum[1]
+
+\chapter{Implementacja systemu}
+\lipsum[1]
+
+\section{Ontologie}
+\lipsum[1]
+
+\section{Dane}
+\lipsum[1]
+
+\section{Algorytm rankingowy}
+\lipsum[1]
+
+\section{Uproszczona aplikacja}
+\lipsum[1]
+
+\section{Analiza błędów}
+\lipsum[1]
+
+\chapter{Podsumowanie}
+
+
+\listoftables{} % jeśli są tabele
+\addcontentsline{toc}{chapter}{Spis tabel}
+
+\listoffigures{} % jeśli są rysunki
+\addcontentsline{toc}{chapter}{Spis rysunków}
+
+\listofcodes{}
+\addcontentsline{toc}{chapter}{Spis listingów}
+
+\addcontentsline{toc}{chapter}{Bibliografia}
+\bibliographystyle{ieeetr}
+\bibliography{bibliography/cite}
+
+
+\end{document}
