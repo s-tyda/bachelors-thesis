@@ -275,8 +275,11 @@ TSWLatexianTemp*
 # Makeindex log files
 *.lpz
 
-# LibreOffice lock files
+# LibreOffice
 *.~lock*
 
-# TeXstudio files
+# TeXstudio
 *.locode
+
+# PyCharm
+.idea/
