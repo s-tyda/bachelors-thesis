@@ -274,3 +274,6 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# LibreOffice lock files
+*.~lock*
