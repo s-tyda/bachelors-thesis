@@ -13,7 +13,7 @@ Properties and fields:
 - cost
 - relatedCompany (zarówno dystrybutor jak i producent)
 - relatedTo (powiązania z innymi filmami typu prequel/sequel/reboot etc.)
-- Contributor (każda osoba powiązana, aktor jak i członek zespołu,
+- Cast (każda osoba powiązana, aktor jak i członek zespołu,
 jeśli ktoś ma kilka ról, to ma rekord na każde pole, klasa Person)
 
 # Person
